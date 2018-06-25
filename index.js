@@ -29,19 +29,19 @@ bot.on("ready", async () => {
     //bot.user.setActivity("tutorials on TSC", {type: "WATCHING"});
 });
 
-bot.on("guildMemberAdd", async member => {
+//bot.on("guildMemberAdd", async member => {
 
-    console.log(`${member.id} joined the server.`);
-    let welcomechannel = member.guild.channels.find(`name`, "home");
-    welcomechannel.send(`LOOK OUT EVERYONE! ${member} has joined the party!`);
-});
+    //console.log(`${member.id} joined the server.`);
+    //let welcomechannel = member.guild.channels.find(`name`, "home");
+    //welcomechannel.send(`LOOK OUT EVERYONE! ${member} has joined the party!`);
+//});
 
-bot.on("guildMemberRemove", async member => {
+//bot.on("guildMemberRemove", async member => {
 
-    console.log(`${member.id} left the server.`);
-    let welcomechannel = member.guild.channels.find(`name`, "home");
-    welcomechannel.send(`Good riddance! ${member} has bailed on the server!`);
-});
+    //console.log(`${member.id} left the server.`);
+    //let welcomechannel = member.guild.channels.find(`name`, "home");
+    //welcomechannel.send(`Good riddance! ${member} has bailed on the server!`);
+//});
 
 bot.on("channelCreate", async channel => {
 
