@@ -46,14 +46,14 @@ bot.on("ready", async () => {
 bot.on("channelCreate", async channel => {
 
     console.log(`${channel.name} has been created.`);
-    let sChannel = channel.guild.channels.find(`name`, "home");
+    let sChannel = channel.guild.channels.find(`name`, "common-room");
     sChannel.send(`${channel} channel has been created!`);
 });
 
 bot.on("channelDelete", async channel => {
 
     console.log(`${channel.name} has been deleted.`);
-    let sChannel = channel.guild.channels.find(`name`, "home");
+    let sChannel = channel.guild.channels.find(`name`, "common-room");
     sChannel.send(`${channel.name} channel has been deleted.`);
 });
 
