@@ -63,11 +63,11 @@ bot.on("message", (message) => {
     }
 });
 
-bot.on("message", (message) => {
-    if(message.content == "Severus, Severus, Severus Snape!") {
-        message.channel.send("Dumbledore!");
-    }
-});
+//bot.on("message", (message) => {
+    //if(message.content == "Severus, Severus, Severus Snape!") {
+        //message.channel.send("Dumbledore!");
+    //}
+//});
 
 bot.on("message", async message => {
     if(message.author.bot) return;
