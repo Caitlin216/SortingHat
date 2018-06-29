@@ -91,9 +91,8 @@ bot.on("message", async message => {
         cooldown.add(message.author.id);
     //}
     let messageArray = message.content.split(" ");
-    let cmd = messageArray[0];
+    let cmd = messageArray[0].toLowerCase();
     let args = messageArray.slice(1);
-    cmd.toLowerCase();
     
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot,message,args); 
