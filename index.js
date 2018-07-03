@@ -29,12 +29,20 @@ bot.on("ready", async () => {
     //bot.user.setActivity("tutorials on TSC", {type: "WATCHING"});
 });
 
-//bot.on("guildMemberAdd", async member => {
+bot.on("guildMemberAdd", async member => {
+    
+    console.log(`${member.id} joined the server!`);
+    let role = member.guild.roles.find('name', 'Student');
+    member.addRole(role);
+});
 
-    //console.log(`${member.id} joined the server.`);
-    //let welcomechannel = member.guild.channels.find(`name`, "home");
-    //welcomechannel.send(`LOOK OUT EVERYONE! ${member} has joined the party!`);
-//});
+bot.on("guildMemberAdd", async member => {
+
+    console.log(`${member.id} joined the server.`);
+    let welcomechannel = member.guild.channels.find(`name`, "new-students");
+    welcomechannel.send(`Dear Mr/Ms ${member}, we are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary objectives to complete before entering the school. You are required to read the rules at #house-rules . After reading the rules proceed to #sorting-hat to get sorted in a house. Last but not least fill in a short bio about yourself in #bios . Sincerely Professor Albus Dumbledore.`);
+
+});
 
 //bot.on("guildMemberRemove", async member => {
 
