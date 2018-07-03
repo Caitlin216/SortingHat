@@ -40,7 +40,7 @@ bot.on("guildMemberAdd", async member => {
 
     console.log(`${member.id} joined the server.`);
     let welcomechannel = member.guild.channels.find(`name`, "new-students");
-    welcomechannel.send(`Dear Mr/Ms ${member}, we are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary objectives to complete before entering the school. You are required to read the rules at #house-rules . After reading the rules proceed to #sorting-hat to get sorted in a house. Last but not least fill in a short bio about yourself in #bios . Sincerely Professor Albus Dumbledore.`);
+    welcomechannel.send(`Dear Mr/Ms ${member}, we are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary objectives to complete before entering the school. You are required to read the rules at <#448968076038373383>. After reading the rules proceed to <#448969324254855185> to get sorted in a house. Last but not least fill in a short bio about yourself in <#461248739114221589>. Sincerely Professor Albus Dumbledore.`);
 
 });
 
