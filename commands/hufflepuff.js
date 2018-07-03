@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    let role = args.join(" ");
-    if(!role) return message.reply("Specify a role!");
+    //let role = args.join(" ");
+    //if(!role) return message.reply("Specify a role!");
     let gRole = message.guild.roles.find(`name`, role);
     if(!gRole) return message.reply("Couldn't find that role.");
 
