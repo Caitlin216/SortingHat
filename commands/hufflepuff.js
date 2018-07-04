@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let Role = message.guild.roles.find('name','Hufflepuff')
     message.member.addRole(Role)
 
-    let aRole = message.guild.roles.find('name','Ravenclaw','Slytherin','Gryffindor')
+    let aRole = message.guild.roles.find('name','Ravenclaw'||'Slytherin'||'Gryffindor')
     message.member.removeRole(aRole)
     .then(deleted => console.log(`Deleted role ${deleted.name}`))
     .catch(console.error)
