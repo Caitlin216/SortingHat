@@ -4,6 +4,10 @@ module.exports.run = async (bot, message, args) => {
 
     let Role = message.guild.roles.find('name','Hufflepuff')
     message.member.addRole(Role)
+    
+    let aRole = roles.find('name','Ravenclaw')
+    message.member.removeRole(Role)
+    
     message.reply("Hmm...okay...I can see you are optimistic and kind-hearted...hmm...I know there is a house that can fit in you in...go for HUFFLEPUFF!!!");
 }
 
