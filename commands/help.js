@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Admin commands", "!prefix <desired prefix>, !addrole @username <role>, !removerole @username <role>, !tempmute @username <time in s or d>, !ban @username <reason>, !clear <amount msg>, !say <sentence>", true)
     .setFooter("For more information about certain command(s) go to an admin or view the commands channel.")
 
-    message.channel.send(helpEmbed);
+    message.author.sendMessage(helpEmbed);
 }
 
 module.exports.help = {
