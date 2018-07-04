@@ -3,26 +3,11 @@ const superagent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
     
-    constructor() {
-        super({
-            name: 'hackban',
-            category: bu.CommandType.ADMIN,
-            usage: 'hackban <user...> [days]',
-            info: 'Bans a user who isn\'t currently on your guild, where `<user...>` is a list of user IDs or mentions (separated by spaces) and `days` is the number of days to delete messages for (defaults to 1).\nIf mod-logging is enabled, the ban will be logged.',
-            flags: [{ flag: 'r', word: 'reason', desc: 'The reason for the ban.' }]
-        });
-    }
+        if (!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("Sorry, you can't do that.");
+        //let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
+        //if(!rMember) return message.reply("I couldn't find that person on the Marauder's map. Are you sure they exist?");  
+        }
 
-    async execute(msg, words, text) {
-        if (!msg.channel.guild.members.get(bot.user.id).permission.json.banMembers) {
-            bu.send(msg, `I don't have permission to ban users!`);
-            return;
-        }
-        let banPerms = (await bu.guildSettings.get(msg.guild.id, 'banoverride')) || 0;
-        if (!bu.comparePerms(msg.member, banPerms) && !msg.member.permission.json.banMembers) {
-            bu.send(msg, `You don't have permission to ban users!`);
-            return;
-        }
         let input = bu.parseInput(this.flags, words);
         let userList = [];
         let days = 1;
@@ -39,38 +24,7 @@ module.exports.run = async (bot, message, args) => {
             }
         }
 
-        if (!bu.bans[msg.channel.guild.id])
-            bu.bans[msg.channel.guild.id] = {};
-        console.verbose(userList);
-        if (userList.length == 1)
-            bu.bans[msg.channel.guild.id][userList[0]] = {
-                mod: msg.author,
-                type: 'Hack-Ban',
-                reason: input.r
-            };
-        else
-            bu.bans[msg.channel.guild.id].mass = {
-                mod: msg.author,
-                type: 'Mass Hack-Ban',
-                users: userList,
-                newUsers: [],
-                reason: input.r
-            };
-        console.dir(bu.bans[msg.channel.guild.id]);
-        userList.forEach(m => {
-            bot.banGuildMember(msg.channel.guild.id, m, days, 'Banned by ' + bu.getFullName(msg.author) + (input.r ? ' with reason: ' + input.r.join(' ') : '')).then(() => {
-                return;
-            }).catch(console.error);
-        });
-
         bu.send(msg, ':ok_hand:');
-
-
-        //bot.ban
-    }
-}
-    
-}
 
 module.exports.help = {
     name: "hackban"
