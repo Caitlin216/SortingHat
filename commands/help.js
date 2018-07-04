@@ -8,6 +8,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("Here is a list of commands you can use. The bot also has some easter eggs. Chat and find out!")
     .setThumbnail(bicon)
     .setColor("#CD853F")
+    .addBlankField(true)
     .addField("**Sorting**", "`!ravenclaw` get sorted in Ravenclaw, `!gryffindor` get sorted in Gryffindor, `!hufflepuff` get sorted in Hufflepuff, `!Slytherin` get sorted in Slytherin, `!sortme` get a link to sorting hat quiz.")
     .addField("**Information**","`!botinfo` shows info about the bot, `!serverinfo` shows info about the server, `!help` shows list of commands.")
     .addField("**Incident**","`!report @username <reason>` report the selected user.")
