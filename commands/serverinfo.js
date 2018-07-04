@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#CD853F")
         .setThumbnail(sicon)
         .addField("Server Name", message.guild.name)
-        .addField("Sort Server", "Gaming, event, roleplay and socialising server~")
+        .addField("Sort Server", "Harry Potter roleplay and socialising server.")
         .addField("Created On", message.guild.createdAt)
         .addField("You Joined", message.member.joinedAt)
         .addField("Total Members", message.guild.memberCount);
