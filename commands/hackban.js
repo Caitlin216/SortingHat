@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
         //if(!rMember) return message.reply("I couldn't find that person on the Marauder's map. Are you sure they exist?");  
         }
 
-        let input = bu.parseInput(this.flags, words);
+        let input = bot.parseInput(this.flags, words);
         let userList = [];
         let days = 1;
         for (let i = 0; i < input.undefined.length; i++) {
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
             }
         }
 
-        bu.send(msg, ':ok_hand:');
+        bot.send(msg, ':ok_hand:');
 
 module.exports.help = {
     name: "hackban"
