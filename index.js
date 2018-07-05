@@ -51,19 +51,19 @@ bot.on("guildMemberAdd", async member => {
     //welcomechannel.send(`Good riddance! ${member} has bailed on the server!`);
 //});
 
-bot.on("channelCreate", async channel => {
+//bot.on("channelCreate", async channel => {
 
-    console.log(`${channel.name} has been created.`);
-    let sChannel = channel.guild.channels.find(`name`, "$<#448978258596331531>");
-    sChannel.send(`${channel} channel has been created!`);
-});
+    //console.log(`${channel.name} has been created.`);
+    //let sChannel = channel.guild.channels.find(`name`, "channel");
+    //sChannel.send(`${channel} channel has been created!`);
+//});
 
-bot.on("channelDelete", async channel => {
+//bot.on("channelDelete", async channel => {
 
-    console.log(`${channel.name} has been deleted.`);
-    let sChannel = channel.guild.channels.find("<#448978258596331531>");
-    sChannel.send(`${channel.name} channel has been deleted.`);
-});
+    //console.log(`${channel.name} has been deleted.`);
+    //let sChannel = channel.guild.channels.find(`name`, "channel");
+    //sChannel.send(`${channel.name} channel has been deleted.`);
+//});
 
 bot.on("message", (message) => {
     if(message.content == "ping") {
