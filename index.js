@@ -61,7 +61,7 @@ bot.on("channelCreate", async channel => {
 bot.on("channelDelete", async channel => {
 
     console.log(`${channel.name} has been deleted.`);
-    let sChannel = channel.guild.channels.find(`name`, "$<#448978258596331531>");
+    let sChannel = channel.guild.channels.find("<#448978258596331531>");
     sChannel.send(`${channel.name} channel has been deleted.`);
 });
 
