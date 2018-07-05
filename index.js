@@ -47,21 +47,21 @@ bot.on("guildMemberAdd", async member => {
 //bot.on("guildMemberRemove", async member => {
 
     //console.log(`${member.id} left the server.`);
-    //let welcomechannel = member.guild.channels.find(`name`, "home");
+    //let welcomechannel = member.guild.channels.find(`name`, "great-hall");
     //welcomechannel.send(`Good riddance! ${member} has bailed on the server!`);
 //});
 
 bot.on("channelCreate", async channel => {
 
     console.log(`${channel.name} has been created.`);
-    let sChannel = channel.guild.channels.find(`name`, "common-room");
+    let sChannel = channel.guild.channels.find(`name`, "<#448978258596331531>");
     sChannel.send(`${channel} channel has been created!`);
 });
 
 bot.on("channelDelete", async channel => {
 
     console.log(`${channel.name} has been deleted.`);
-    let sChannel = channel.guild.channels.find(`name`, "common-room");
+    let sChannel = channel.guild.channels.find(`name`, "<#448978258596331531>");
     sChannel.send(`${channel.name} channel has been deleted.`);
 });
 
