@@ -32,7 +32,7 @@ bot.on("ready", async () => {
 bot.on("guildMemberAdd", async member => {
     
     console.log(`${member.id} joined the server!`);
-    let role = member.guild.roles.find('name', 'Student');
+    let role = member.guild.roles.find('name', 'Invited');
     member.addRole(role);
 });
 
