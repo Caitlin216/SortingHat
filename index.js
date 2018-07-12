@@ -72,7 +72,7 @@ bot.on("message", (message) => {
 });
 
 bot.on("message", (message) => {
-    if(message.content == "Severus, Severus, Severus Snape!") {
+    if(message.content == "Snape, Snape, Severus Snape!") {
         message.channel.send("Dumbledore!");
     }
 });
