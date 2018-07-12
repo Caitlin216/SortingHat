@@ -69,13 +69,13 @@ bot.on("message", (message) => {
     if(message.content == "ping") {
         message.channel.send("pong");
     }
-});
+//});
 
-bot.on("message", (message) => {
-    if(message.content == "Snape, Snape, Severus Snape!") {
-        message.channel.send("Dumbledore!");
-    }
-});
+//bot.on("message", (message) => {
+    //if(message.content == "Snape, Snape, Severus Snape!") {
+        //message.channel.send("Dumbledore!");
+    //}
+//});
 
 bot.on("message", async message => {
     if(message.author.bot) return;
