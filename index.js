@@ -32,7 +32,7 @@ bot.on("ready", async () => {
 bot.on("guildMemberAdd", async member => {
     
     console.log(`${member.id} joined the server!`);
-    let role = member.guild.roles.find('name', 'Invited');
+    let role = member.guild.roles.find('name', 'Student');
     member.addRole(role);
 });
 
@@ -40,30 +40,30 @@ bot.on("guildMemberAdd", async member => {
 
     console.log(`${member.id} joined the server.`);
     let welcomechannel = member.guild.channels.find(`name`, "new-students");
-    welcomechannel.send(`Dear Mr/Ms ${member}, we are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary objectives to complete before entering the school. You are required to read the rules at <#448968076038373383>. After reading the rules proceed to <#448969324254855185> to get sorted in a house. Last but not least fill in a short bio about yourself in <#461248739114221589>. Sincerely Professor Albus Dumbledore. https://imgur.com/a/WVLkKQ8`);
+    welcomechannel.send(`Dear Mr/Ms ${member}, we are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry. Please find enclosed a list of all necessary objectives to complete before entering the school. You are required to read the rules at <#448968076038373383>. After reading the rules proceed to <#448969324254855185> to get sorted in a house. Last but not least fill in a short bio about yourself in <#461248739114221589>. Sincerely Professor Albus Dumbledore.`);
 
 });
 
 //bot.on("guildMemberRemove", async member => {
 
     //console.log(`${member.id} left the server.`);
-    //let welcomechannel = member.guild.channels.find(`name`, "great-hall");
+    //let welcomechannel = member.guild.channels.find(`name`, "home");
     //welcomechannel.send(`Good riddance! ${member} has bailed on the server!`);
 //});
 
-//bot.on("channelCreate", async channel => {
+bot.on("channelCreate", async channel => {
 
-    //console.log(`${channel.name} has been created.`);
-    //let sChannel = channel.guild.channels.find(`name`, "channel");
-    //sChannel.send(`${channel} channel has been created!`);
-//});
+    console.log(`${channel.name} has been created.`);
+    let sChannel = channel.guild.channels.find(`name`, "common-room");
+    sChannel.send(`${channel} channel has been created!`);
+});
 
-//bot.on("channelDelete", async channel => {
+bot.on("channelDelete", async channel => {
 
-    //console.log(`${channel.name} has been deleted.`);
-    //let sChannel = channel.guild.channels.find(`name`, "channel");
-    //sChannel.send(`${channel.name} channel has been deleted.`);
-//});
+    console.log(`${channel.name} has been deleted.`);
+    let sChannel = channel.guild.channels.find(`name`, "common-room");
+    sChannel.send(`${channel.name} channel has been deleted.`);
+});
 
 bot.on("message", (message) => {
     if(message.content == "ping") {
@@ -71,11 +71,11 @@ bot.on("message", (message) => {
     }
 });
 
-//bot.on("message", (message) => {
-    //if(message.content == "Snape, Snape, Severus Snape!") {
-        //message.channel.send("Dumbledore!");
-    //}
-//});
+bot.on("message", (message) => {
+    if(message.content == "Severus, Severus, Severus Snape!") {
+        message.channel.send("Dumbledore!");
+    }
+});
 
 bot.on("message", async message => {
     if(message.author.bot) return;
