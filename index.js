@@ -24,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`);  
-    bot.user.setActivity("On Hogwarts Mystery!");
+    bot.user.setActivity("Hogwarts Mystery! | !help for help");
 });
 
 bot.on("guildMemberAdd", async member => {
@@ -49,7 +49,7 @@ bot.on("message", (message) => {
 });
 
 bot.on("message", (message) => {
-    if(message.content == "Severus, Severus, Severus Snape!") {
+    if(message.content == "Snape, Snape, Severus Snape!") {
         message.channel.send("Dumbledore!");
     }
 });
