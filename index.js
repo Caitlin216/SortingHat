@@ -69,7 +69,7 @@ bot.on("message", (message) => {
     if(message.content == "ping") {
         message.channel.send("pong");
     }
-//});
+});
 
 //bot.on("message", (message) => {
     //if(message.content == "Snape, Snape, Severus Snape!") {
