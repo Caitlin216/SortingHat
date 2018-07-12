@@ -24,7 +24,8 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`);  
-    bot.user.setActivity("Hogwarts Mystery! | !help for help");
+    //bot.user.setActivity("Hogwarts Mystery! | !help for help");
+    bot.user.setActivity("all the students. | !help for help", {type: "WATCHING"});
 });
 
 bot.on("guildMemberAdd", async member => {
