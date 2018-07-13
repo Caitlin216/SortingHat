@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let Role = message.guild.roles.find('name','Roleplayer')
     message.member.addRole(Role)
 
-    message.reply("you are a wizard!");
+    message.channel.send("you are a wizard, ${member}!");
 }
 
 module.exports.help = {
