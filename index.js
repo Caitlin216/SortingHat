@@ -49,7 +49,7 @@ bot.on("guildMemberAdd", async member => {
     let welcomechannel2 = member.guild.channels.find(`name`, "sorting-hat");
 
     let sortembed = new Discord.RichEmbed()
-    .setFooter("```To be sorted into your house, please use the !gryffindor, !hufflepuff, !ravenclaw or !slytherin command.```");
+    .setFooter("To be sorted into your house, please use the !gryffindor, !hufflepuff, !ravenclaw or !slytherin command.");
 
     welcomechannel2.send(`Hmm, difficult. VERY difficult. Plenty of courage, I see. Not a bad mind, either. There's talent, oh yes. And a thirst to prove yourself. But where to put ${member}?`, (sortembed));
 });
