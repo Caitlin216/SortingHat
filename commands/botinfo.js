@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Ceated By", "Sabrina#0710 [Behance](https://www.behance.net/xabry) [Instagram](https://www.instagram.com/xabryy/)")
         .addField("Special Thanks To", "Zenevee#9561!");
         
-        return message.channel.send(botembed).then(msg => {msg.delete(20000)});
+        //return message.channel.send(botembed).then(msg => {msg.delete(20000)});
 }
 
 module.exports.help = {
