@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail(bicon)
         .addField("Bot Name", bot.user.username)
         .addField("Created On", bot.user.createdAt)
-        .addField("Ceated By", "Sabrina [Behance](https://www.behance.net/xabry) [Instagram](https://www.instagram.com/xabryy/)");
+        .addField("Ceated By", "Sabrina#0710 [Behance](https://www.behance.net/xabry) [Instagram](https://www.instagram.com/xabryy/) | Special thanks to: Zenevee#9561!");
 
         return message.channel.send(botembed).then(msg => {msg.delete(10000)});
 }
