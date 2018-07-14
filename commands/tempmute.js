@@ -5,17 +5,17 @@ module.exports.run = async (bot, message, args) => {
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!tomute) return mesage.reply("Couldn't find your target, maybe they have an invisibility cloak!");
     if(tomute.hasPermission("MANAGE_MESSAGES")) return message.reply("You can't use Silencio on them!");
-    let muterole = message.guild.roles.find(`name`, "muted");
+    let muteRole = message.guild.roles.find(`name`, "Muted");
    //start of create role
-    if(!muterole){
+    if(!muteRole){
         try{
-            muterole = await message.guild.createRole({
+            muteRole = await message.guild.createRole({
                 name: "muted",
                 color: "#000000",
                 permissions: []
             })
             message.guild.channels.forEach(async (channel, id) => {
-                await channel.overwritePermissions(muterole, {
+                await channel.overwritePermissions(muteRole, {
                     SEND_MESSAGES: false,
                     ADD_REACTIONS: false
                 });
@@ -28,11 +28,11 @@ module.exports.run = async (bot, message, args) => {
     let mutetime = args[1];
     if(!mutetime) return message.reply("You didn't specify a time.");
 
-    await(tomute.addRole(muterole.id));
+    await(tomute.addRole(muteRole.id));
     message.reply(`<@${tomute.id}> has been muted for ${ms(ms(mutetime))}`);
 
     setTimeout(function(){
-        tomute.removeRole(muterole.id);
+        tomute.removeRole(muteRole.id);
         message.channel.send(`<@${tomute.id}> has been unmuted!`);
     
     }, ms(mutetime));
