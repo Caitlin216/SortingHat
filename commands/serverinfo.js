@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("You Joined", message.member.joinedAt)
         .addField("Total Members", message.guild.memberCount);
 
-        return message.channel.send(serverembed).then(msg => {msg.delete(10000)});
+        //return message.channel.send(serverembed).then(msg => {msg.delete(10000)});
 }
 
 module.exports.help = {
