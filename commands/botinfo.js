@@ -10,6 +10,8 @@ module.exports.run = async (bot, message, args) => {
         .addField("Created On", bot.user.createdAt)
         .addField("Ceated By", "Sabrina#0710 [Behance](https://www.behance.net/xabry) [Instagram](https://www.instagram.com/xabryy/)")
         .addField("Special Thanks To", "Zenevee#9561!");
+        
+        return message.channel.send(botembed);
 }
 
 module.exports.help = {
