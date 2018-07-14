@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**Incident**","`!report @username <reason>` report the selected user.")
     .addField("**Entertainment**","`!8ball <question>` answers all your questions, `!cat` shows a random picture or gif of a cat, `!doggo` shows a random picture or gif of a dog, `!roll` rolls a die.")
     .addBlankField(true)
-    .addField("**Moderator**","`!prefix <desired prefix>` sets a new prefix, `!addrole @username <role>` adds a role to selected user, `!removerole @username <role>` removes role from selected user, `!tempmute @username <time in s or d>` temporary mutes the selected user, `!kick @username <reason>` kicks selected user, `!ban @username <reason>` bans selected user, `!clear <amount msg>` clears messages, `!say <sentence>` make the bot say anything.")
+    .addField("**Moderator**","`!prefix <desired prefix>` sets a new prefix, `!addrole @username <role>` adds a role to selected user, `!removerole @username <role>` removes role from selected user, `!kick @username <reason>` kicks selected user, `!ban @username <reason>` bans selected user, `!clear <amount msg>` clears messages, `!say <sentence>` make the bot say anything.")
     .setFooter("This bot was created by Sabrina the server owner of Hogwarts.")
 
     message.author.sendMessage(helpEmbed);
