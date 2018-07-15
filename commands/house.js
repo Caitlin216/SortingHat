@@ -111,6 +111,6 @@ module.exports.run = async (bot, message, args) => {
     return msg.channel.send(res);
 }
 
-module.exports.props = {
+module.exports.help = {
     name: 'house'
 }
