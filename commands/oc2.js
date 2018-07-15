@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     .then(deleted => console.log(`Deleted role ${deleted.name}`))
     .catch(console.error)
 
-    message.reply("you just got the role for people who have 2 character in the Role-Play!");
+    message.reply("you just got the role for people who have 2 characters in the Role-Play!");
 }
 
 module.exports.help = {
