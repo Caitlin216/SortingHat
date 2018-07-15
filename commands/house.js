@@ -63,19 +63,19 @@ module.exports.run = async (bot, message, args) => {
     let headRole = msg.guild.roles.find('name', 'Head of House');
     let perfectRole = msg.guild.roles.find('name', 'Perfect');
 
-    for(let house in houses) {
-        houses[house]['role']['base'].members.forEach(m => {
-            houses[house]['memberCount']++;
+    for(let house_ in houses) {
+        houses[house_]['role']['base'].members.forEach(m => {
+            houses[house_]['memberCount']++;
 
-            if(houses[house]['headOfHouse'] == 'None') {
+            if(houses[house_]['headOfHouse'] == 'None') {
                 headRole.members.forEach(m_ => {
-                    if(m.user.tag == m_.user.tag) houses[house]['headOfHouse'] = m.user.tag;
+                    if(m.user.tag == m_.user.tag) houses[house_]['headOfHouse'] = m.user.tag;
                 });
             }
 
             perfectRole.members.forEach(m_ => {
                 if(m.user.tag == m_.user.tag) {
-                    houses[house]['perfects'][houses[house]['perfects'].length] = m.user.tag;
+                    houses[house_]['perfects'][houses[house_]['perfects'].length] = m.user.tag;
                 }
             });
         });
