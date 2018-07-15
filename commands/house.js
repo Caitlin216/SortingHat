@@ -51,7 +51,7 @@ module.exports.run = async (bot, message, args) => {
             houses[house]['chosen'] = true;
         }
     } else if(args[0].toLowerCase() == 'besthouse') {
-        message.reply('HUFFLEPUFF!');
+        return message.reply('HUFFLEPUFF!');
     } else {
         args.forEach(arg => {
             for(let house in houses) {
