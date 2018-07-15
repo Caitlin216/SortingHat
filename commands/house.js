@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
             'description': 'Hufflepuff values hard work, patience, justice, and loyalty.',
             'chosen': false,
             'headOfHouse': 'None',
-            'perfects': [],
+            'prefects': [],
             'memberCount': 0
         },
         'Ravenclaw': {
@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
             'description': 'Ravenclaw values intelligence, creativity, learning, and wit.',
             'chosen': false,
             'headOfHouse': 'None',
-            'perfects': [],
+            'prefects': [],
             'memberCount': 0
         },
         'Gryffindor': {
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
             'description': 'Gryffindor values courage, bravery, nerve, and chivalry.',
             'chosen': false,
             'headOfHouse': 'None',
-            'perfects': [],
+            'prefects': [],
             'memberCount': 0
         },
         'Slytherin': {
@@ -41,7 +41,7 @@ module.exports.run = async (bot, message, args) => {
             'description': 'Slytherin values ambition, cunning, leadership, and resourcefulness.',
             'chosen': false,
             'headOfHouse': 'None',
-            'perfects': [],
+            'prefects': [],
             'memberCount': 0
         }
     }
