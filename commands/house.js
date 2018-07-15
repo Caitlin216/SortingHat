@@ -61,21 +61,21 @@ module.exports.run = async (bot, message, args) => {
     }
 
     let headRole = msg.guild.roles.find('name', 'Head of House');
-    let perfectRole = msg.guild.roles.find('name', 'Perfect');
+    let prefectRole = msg.guild.roles.find('name', 'Prefect');
 
-    for(let house_ in houses) {
-        houses[house_]['role']['base'].members.forEach(m => {
-            houses[house_]['memberCount']++;
+    for(let house in houses) {
+        houses[house]['role']['base'].members.forEach(m => {
+            houses[house]['memberCount']++;
 
-            if(houses[house_]['headOfHouse'] == 'None') {
+            if(houses[house]['headOfHouse'] == 'None') {
                 headRole.members.forEach(m_ => {
-                    if(m.user.tag == m_.user.tag) houses[house_]['headOfHouse'] = m.user.tag;
+                    if(m.user.tag == m_.user.tag) houses[house]['headOfHouse'] = m.user.tag;
                 });
             }
 
-            perfectRole.members.forEach(m_ => {
+            prefectRole.members.forEach(m_ => {
                 if(m.user.tag == m_.user.tag) {
-                    houses[house_]['perfects'][houses[house_]['perfects'].length] = m.user.tag;
+                    houses[house]['prefects'][houses[house]['prefects'].length] = m.user.tag;
                 }
             });
         });
@@ -94,12 +94,12 @@ module.exports.run = async (bot, message, args) => {
             houseField += `\n*${houses[house]['description']}*\n`
             houseField += `\n**${house} has ${houses[house]['memberCount']} Members!**`
             houseField += `\n**Head of House**: ${houses[house]['headOfHouse']}`
-            houseField += `\n**__Perfect__**\n`
-            if(houses[house]['perfects'].length == 0) {
-                houseField += `\n*No perfects in this house . . .*`;
+            houseField += `\n**__Prefect__**\n`
+            if(houses[house]['prefects'].length == 0) {
+                houseField += `\n*No prefects in this house . . .*`;
             } else {
-                for(let m in houses[house]['perfects']) {
-                    houseField += `\n*${houses[house]['perfects'][m]}*`;
+                for(let m in houses[house]['prefects']) {
+                    houseField += `\n*${houses[house]['prefects'][m]}*`;
                 }
             }
 
@@ -111,6 +111,6 @@ module.exports.run = async (bot, message, args) => {
     return msg.channel.send(res);
 }
 
-module.exports.help = {
+module.exports.props = {
     name: 'house'
 }
