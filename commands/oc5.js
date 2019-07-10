@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
     .catch(console.error)
     
     let dRole = message.guild.roles.find('name','Character #4')
-    message.member.removeRole(cRole)
+    message.member.removeRole(dRole)
     .then(deleted => console.log(`Deleted role ${deleted.name}`))
     .catch(console.error)
 
