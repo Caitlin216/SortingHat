@@ -19,6 +19,11 @@ module.exports.run = async (bot, message, args) => {
     message.member.removeRole(cRole)
     .then(deleted => console.log(`Deleted role ${deleted.name}`))
     .catch(console.error)
+    
+    let cRole = message.guild.roles.find('name','Character #5')
+    message.member.removeRole(cRole)
+    .then(deleted => console.log(`Deleted role ${deleted.name}`))
+    .catch(console.error)
 
     message.reply("you just got the role for people who have 2 characters in the Role-Play!");
 }
